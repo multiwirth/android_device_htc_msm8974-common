@@ -95,16 +95,6 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 # Charge mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
 
-# Dexpreopt
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
-    endif
-  endif
-endif
-
 # Display
 TARGET_SCREEN_DENSITY := 480
 TARGET_DISABLE_POSTRENDER_CLEANUP := true
