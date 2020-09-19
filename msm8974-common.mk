@@ -274,6 +274,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    libaudioclient_shim \
     libcnefeatureconfig \
     librmnetctl \
     libshim_ril \
