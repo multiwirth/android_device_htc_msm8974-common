@@ -146,7 +146,8 @@ BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/hw/camera.vendor.msm8974.so|libshim_camera.so \
-    /system/vendor/lib/libril-qc-qmi-1.so|libshim_ril.so
+    /system/vendor/lib/libril-qc-qmi-1.so|libshim_ril.so \
+    /system/lib/liblog.so|liblog_htc.so
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
