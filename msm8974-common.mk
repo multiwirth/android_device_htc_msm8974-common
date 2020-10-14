@@ -152,6 +152,11 @@ PRODUCT_PACKAGES += \
     libqcomfm_jni \
     qcom.fmradio
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-impl \
+    android.hardware.health@2.0-service
+
 # HTC logging symbols
 PRODUCT_PACKAGES += \
     liblog_htc
