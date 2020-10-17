@@ -135,6 +135,9 @@ TARGET_PROVIDES_LIBLIGHT := true
 # LMKD stats logging
 TARGET_LMKD_STATS_LOG := true
 
+# memfd
+TARGET_HAS_MEMFD_BACKPORT := true
+
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 
