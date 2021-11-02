@@ -106,10 +106,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.jbims=1 \
     DEVICE_PROVISIONED=1
 
-# Traced
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.traced.enable=0
-
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
