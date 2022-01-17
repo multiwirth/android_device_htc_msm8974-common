@@ -52,6 +52,7 @@ TARGET_USES_64_BIT_BINDER := true
 # Kernel
 BOARD_DTBTOOL_ARGS := --dt-tag "htc,project-id = <"
 BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 zcache
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_PAGESIZE := 2048
@@ -60,6 +61,7 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 -
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
 
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
@@ -133,8 +135,10 @@ TARGET_USES_INTERACTION_BOOST := true
 TARGET_USE_SDCLANG := true
 
 # SELinux
-include device/qcom/sepolicy-legacy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+# include device/qcom/sepolicy-legacy/sepolicy.mk
+# BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy-minimal
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
