@@ -143,7 +143,6 @@ SELINUX_IGNORE_NEVERALLOWS := true
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/hw/camera.vendor.msm8974.so|libshim_camera.so \
-    /system/vendor/lib/hw/camera.vendor.msm8974.so|libshim_sensor.so \
     /system/vendor/lib/libril-qc-qmi-1.so|libshim_ril.so \
     /system/lib/liblog.so|liblog_htc.so \
     /system/vendor/lib/libril-qc-qmi-1.so|libaudioclient_shim.so
